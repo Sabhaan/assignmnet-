@@ -229,47 +229,6 @@
     </div>
   </footer>
 
-  <script>
-    // Scroll observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.gallery-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        cards.forEach(card => {
-          if (filter === 'all' || card.dataset.cat === filter) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // Lightbox
-    function openLightbox(el) {
-      const thumb = el.querySelector('.thumb');
-      document.getElementById('lb-emoji').textContent = thumb ? thumb.textContent.trim() : '🌊';
-      document.getElementById('lb-title').textContent = el.dataset.title;
-      document.getElementById('lb-desc').textContent = el.dataset.desc;
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(event) {
-      if (!event || event.target === document.getElementById('lightbox') || event.currentTarget.classList.contains('lightbox-close')) {
-        document.getElementById('lightbox').classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({}); });
-  </script>
+ 
 </body>
 </html>

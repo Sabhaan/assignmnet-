@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- NAV---------------------------------------------------->
   <nav>
     <div class="nav-logo">Velaa <span>Maldives</span></div>
     <ul class="nav-links">
@@ -20,7 +20,7 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO section --------------------------------------->
   <section class="hero">
     <div class="hero-bg-pattern"></div>
     <div class="hero-content">
@@ -37,7 +37,7 @@
     </svg>
   </section>
 
-  <!-- STATS -->
+  <!-- STATS -------------------------------------------->
   <div class="stats-bar">
     <div class="stat">
       <div class="stat-num">1,200+</div>
@@ -163,12 +163,5 @@
     </div>
   </footer>
 
-  <script>
-    // Scroll animation observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
