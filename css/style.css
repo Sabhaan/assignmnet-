@@ -348,8 +348,38 @@ footer {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.fade-up.visible { opacity: 1; transform: none; }
+
+/* ===== ANIMATIONS (NO JS VERSION FIX) ===== */
+
+/* Make everything visible by default */
+.fade-up {
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional: smooth load animation (no JS needed) */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Hero animation still works */
+.hero-content {
+  max-width: 700px;
+  animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* .fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: none; } */
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
