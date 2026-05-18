@@ -6,71 +6,7 @@
   <title>Velaa Maldives — Gallery</title>
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .lightbox {
-      display: none; position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,42,58,0.96); align-items: center; justify-content: center;
-      flex-direction: column;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox-inner {
-      max-width: 700px; width: 90%; text-align: center;
-    }
-    .lightbox-emoji {
-      font-size: 8rem; margin-bottom: 1.5rem;
-      filter: drop-shadow(0 0 30px rgba(91,196,216,0.3));
-    }
-    .lightbox-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem; color: var(--white); margin-bottom: 0.5rem;
-    }
-    .lightbox-desc { color: var(--sand); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
-    .lightbox-close {
-      position: absolute; top: 1.5rem; right: 2rem;
-      font-size: 2rem; color: var(--sand); cursor: pointer;
-      background: none; border: none; line-height: 1;
-    }
-    .lightbox-close:hover { color: var(--ocean-light); }
-    .filter-bar {
-      display: flex; gap: 0.75rem; justify-content: center;
-      flex-wrap: wrap; margin-bottom: 3rem;
-    }
-    .filter-btn {
-      padding: 0.5rem 1.4rem; border-radius: 50px;
-      font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;
-      cursor: pointer; border: 1.5px solid var(--ocean-mid);
-      background: transparent; color: var(--ocean-mid);
-      transition: all 0.25s ease;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--ocean-mid); color: var(--white);
-    }
-    .full-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .gallery-card {
-      border-radius: 8px; overflow: hidden;
-      cursor: pointer; position: relative;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .gallery-card:hover { transform: scale(1.03); box-shadow: 0 12px 40px rgba(10,42,58,0.25); }
-    .gallery-card .thumb {
-      height: 220px; display: flex; align-items: center; justify-content: center;
-      font-size: 3.5rem; transition: transform 0.4s ease;
-    }
-    .gallery-card:hover .thumb { transform: scale(1.08); }
-    .gallery-card .overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,42,58,0.9) 0%, transparent 55%);
-      opacity: 0; transition: opacity 0.3s ease;
-      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem;
-    }
-    .gallery-card:hover .overlay { opacity: 1; }
-    .overlay h4 { font-family: 'Playfair Display',serif; color: var(--white); font-size: 1rem; }
-    .overlay span { color: var(--ocean-light); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
-    @media (max-width:700px) { .full-gallery { grid-template-columns: 1fr 1fr; } }
-    @media (max-width:480px) { .full-gallery { grid-template-columns: 1fr; } }
+    
   </style>
 </head>
 <body>
@@ -96,13 +32,7 @@
 
   <!-- GALLERY -->
   <section style="background:var(--sand-light);">
-    <div class="filter-bar fade-up">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="ocean">Ocean</button>
-      <button class="filter-btn" data-filter="marine">Marine Life</button>
-      <button class="filter-btn" data-filter="island">Islands</button>
-      <button class="filter-btn" data-filter="sunset">Sunsets</button>
-    </div>
+ 
     <div class="full-gallery">
       <!-- Image 1 -->
       <div class="gallery-card fade-up" data-cat="ocean"
